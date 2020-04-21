@@ -12,4 +12,9 @@ $(function() {
     $(".shopping-list").on("click", ".shopping-item-toggle", function(event) {
         $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
     });
+
+    // Event delegation that deletes a shopping item when the "delete" button is selected
+    $(".shopping-list").on("click", ".shopping-item-delete", function(event) {
+        $(this).closest("li").remove();
+    });
 })
